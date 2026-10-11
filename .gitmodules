@@ -1,0 +1,3 @@
+[submodule "lab-protocol"]
+	path = lab-protocol
+	url = https://github.com/Synpex/lab-protocol.git
