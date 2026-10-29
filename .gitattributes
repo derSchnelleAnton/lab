@@ -1,0 +1,15 @@
+* text=auto
+
+# Shell-Skripte immer mit LF, damit mvnw unter Linux/macOS ausführbar bleibt
+*.sh   text eol=lf
+mvnw   text eol=lf
+
+# Windows-Batch-Dateien mit CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# Binärdateien explizit markieren
+*.jar  binary
+*.png  binary
+*.jpg  binary
+*.woff binary
