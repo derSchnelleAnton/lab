@@ -5,6 +5,7 @@ out/
 .gradle
 
 # Vaadin Frontend
+# https://vaadin.com/docs/latest/flow/configuration/source-control
 node_modules/
 src/main/frontend/generated/
 pnpmfile.js
