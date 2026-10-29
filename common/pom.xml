@@ -2,8 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
+    <!-- We do not have spring-boot-starter-parent as parent but the root POM.
+        Spring-boot versions (and versions of all other dependencies) are managed
+        in the parent POM. In this POM we only need to include them as dependencies. -->
     <parent>
         <groupId>edu.mci.labgroup3</groupId>
         <artifactId>lab</artifactId>

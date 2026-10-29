@@ -4,6 +4,9 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
+    <!-- spring-boot-starter-parent -> This Parent POM -> [gameserver, common, player-client] -->
+    <!-- Ensures that the Spring configuration stays the same across all modules and that
+        dependencyManagement can be done through this parent POM. -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -16,6 +19,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+    <!-- Here we declare the submodules managed by this parent POM. -->
 	<modules>
 		<module>common</module>
 		<module>gameserver</module>
