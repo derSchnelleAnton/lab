@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+    <!-- spring-boot-starter-parent -> This Parent POM -> [gameserver, common, player-client] -->
+    <!-- Ensures that the Spring configuration stays the same across all modules and that
+        dependencyManagement can be done through this parent POM. -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.1.2</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>edu.mci.labgroup3</groupId>
+	<artifactId>lab</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+    <!-- Here we declare the submodules managed by this parent POM. -->
+	<modules>
+		<module>common</module>
+		<module>gameserver</module>
+		<module>player-client</module>
+	</modules>
+
+	<properties>
+		<java.version>25</java.version>
+		<vaadin.version>25.3.4</vaadin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.vaadin</groupId>
+				<artifactId>vaadin-bom</artifactId>
+				<version>${vaadin.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>edu.mci.labgroup3</groupId>
+				<artifactId>common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
